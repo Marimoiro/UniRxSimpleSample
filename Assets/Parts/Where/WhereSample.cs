@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UniRx;
+using UniRx.Triggers;
 
 public class WhereSample : Base {
 
@@ -9,8 +10,8 @@ public class WhereSample : Base {
         //Returnで(0,1)という値をSubscribe内に流し込んでる
         Observable.Return(new Vector2(0, 0.5f)).Subscribe(v => gameObject.transform.position = v);
 
-        //Whereで2回に1回しかSubscribe内まで値が来ないようにしてる
-        Observable.EveryUpdate().Where(l => l % 2 == 0).Subscribe(l => Move(0.01f, 0));
+        //Whereで左クリックの間しか値がプッシュされないようにしている
+        this.UpdateAsObservable().Where(_ => Input.GetMouseButton(0)).Subscribe(l => Move(0.01f, 0));
 	}
 	
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UniRx;
+using UniRx.Triggers;
 
 public class First : Base
 {
@@ -10,10 +11,9 @@ public class First : Base
     {
         gameObject.transform.position = new Vector2(0, 1f);
 
-        //100Frameたったら1.5右に動かす
-        Observable.EveryUpdate().First(l => l >= 100).Subscribe(l => Move(1.5f, 0));
-
-        
-
+        //クリックされたら右に1.5動かす(但し1回だけ)
+        this.UpdateAsObservable()
+            .First(l => Input.GetMouseButton(0))
+            .Subscribe(l => Move(1.5f, 0));
     }
 }

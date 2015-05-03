@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UniRx;
+using UniRx.Triggers;
 
 public class TakeSample : Base {
 
@@ -9,7 +10,9 @@ public class TakeSample : Base {
         gameObject.transform.position = new Vector2(0, 0.5f);
 
         //Takeで最初の100回以外はカット
-        Observable.EveryUpdate().Take(100).Subscribe(l => Move(0.01f, 0));
+        this.UpdateAsObservable()
+            .Take(100)
+            .Subscribe(l => Move(0.01f, 0));
 	}
 	
 }

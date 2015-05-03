@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UniRx;
+using UniRx.Triggers;
 
 public class SubscribeSample : Base
 {
@@ -12,7 +13,7 @@ public class SubscribeSample : Base
         Observable.Return(new Vector2(0, 1))
             .Subscribe(v => gameObject.transform.position = v);
 
-        //EveryUpdateでUpdateのたびに値流しこんでる
-        Observable.EveryUpdate().Subscribe(l => Move(0.01f, 0));
+        //UpdateAsObservableでUpdateのたびに値流しこんでる
+        this.UpdateAsObservable().Subscribe(_ => Move(0.01f, 0));
 	}
 }

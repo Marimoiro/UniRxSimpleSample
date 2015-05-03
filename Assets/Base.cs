@@ -8,7 +8,7 @@ public class Base : MonoBehaviour {
 	
 	}
 	
-	// Update is called once per frame
+	// (dx,dy)だけ移動する
 	public void Move (float dx,float dy) {
         gameObject.transform.position += new Vector3(dx, dy, 0);
 	}

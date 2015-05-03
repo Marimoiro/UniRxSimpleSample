@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UniRx;
-using UnityEngine.UI;
+using UniRx.Triggers;
 
 public class SkipWhile : Base {
 
@@ -11,8 +11,8 @@ public class SkipWhile : Base {
         gameObject.transform.position = new Vector2(0, 0.5f);
 
         //Takeで最初の100回以外はカット
-        Observable.EveryUpdate()
+        this.UpdateAsObservable()
             .SkipWhile(_ => !Input.GetMouseButton(0))
-            .Subscribe(l => Move(0.01f, 0));
+            .Subscribe(_ => Move(0.01f, 0));
     }
 }
