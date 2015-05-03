@@ -1,0 +1,10 @@
+# UniRxSimpleSample
+UniRxの布教用超短いサンプル集
+
+くわしくはこちら
+http://qiita.com/Marimoiro/items/b0c66c6c22cf58bde049
+
+これをcheckoutかzipで落として展開した後Unityで開いてAssetStoreからUniRx落とせば眺められます。
+
+Samplesにそれぞれの回で使ったGameObjectがまとまってプレハブになっています。
+Partsにはそれぞれの機能のスクリプトと単体のプレハブが入っています。
