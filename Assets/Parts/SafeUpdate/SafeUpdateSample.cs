@@ -3,7 +3,7 @@ using System.Collections;
 using UniRx;
 using System;
 
-public class SafeUpdate : Base
+public class SafeUpdateSample : Base
 {
 
 	// Use this for initialization

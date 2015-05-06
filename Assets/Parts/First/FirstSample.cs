@@ -3,7 +3,7 @@ using System.Collections;
 using UniRx;
 using UniRx.Triggers;
 
-public class First : Base
+public class FirstSample : Base
 {
 
     // Use this for initialization

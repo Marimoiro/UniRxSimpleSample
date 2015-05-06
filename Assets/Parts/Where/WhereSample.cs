@@ -11,7 +11,9 @@ public class WhereSample : Base {
         Observable.Return(new Vector2(0, 0.5f)).Subscribe(v => gameObject.transform.position = v);
 
         //Whereで左クリックの間しか値がプッシュされないようにしている
-        this.UpdateAsObservable().Where(_ => Input.GetMouseButton(0)).Subscribe(l => Move(0.01f, 0));
+        this.UpdateAsObservable()
+            .Where(_ => Input.GetMouseButton(0))
+            .Subscribe(l => Move(0.01f, 0));
 	}
 	
 }

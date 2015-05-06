@@ -1,4 +1,4 @@
-# UniRxSimpleSample
+﻿# UniRxSimpleSample
 UniRxの布教用超短いサンプル集
 
 くわしくはこちら
@@ -8,3 +8,7 @@ http://qiita.com/Marimoiro/items/b0c66c6c22cf58bde049
 
 Samplesにそれぞれの回で使ったGameObjectがまとまってプレハブになっています。
 Partsにはそれぞれの機能のスクリプトと単体のプレハブが入っています。
+
+
+自由に使って構いません。
+ただし一切の保証はしません。

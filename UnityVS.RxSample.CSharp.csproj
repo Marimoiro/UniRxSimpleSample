@@ -54,9 +54,6 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -65,14 +62,19 @@
     <Compile Include="Assets\Base.cs" />
     <Compile Include="Assets\Parts\ButtonTrigger\ClickButton.cs" />
     <Compile Include="Assets\Parts\ButtonTrigger\TwoClickButton.cs" />
-    <Compile Include="Assets\Parts\First\First.cs" />
-    <Compile Include="Assets\Parts\SafeUpdate\SafeUpdate.cs" />
+    <Compile Include="Assets\Parts\First\FirstSample.cs" />
+    <Compile Include="Assets\Parts\OnCompleted\OnCompletedSample.cs" />
+    <Compile Include="Assets\Parts\Repeat\RepeatSample.cs" />
+    <Compile Include="Assets\Parts\SafeUpdate\SafeUpdateSample.cs" />
     <Compile Include="Assets\Parts\Select\SelectSample.cs" />
-    <Compile Include="Assets\Parts\Skip\Skip.cs" />
-    <Compile Include="Assets\Parts\SkipWhile\SkipWhile.cs" />
+    <Compile Include="Assets\Parts\Skip\SkipSample.cs" />
+    <Compile Include="Assets\Parts\SkipWhile\SkipWhileSample.cs" />
     <Compile Include="Assets\Parts\Subscribe\SubscribeSample.cs" />
     <Compile Include="Assets\Parts\Take\TakeSample.cs" />
-    <Compile Include="Assets\Parts\TakeWhile\TakeWhile.cs" />
+    <Compile Include="Assets\Parts\TakeWhile\TakeWhileSample.cs" />
+    <Compile Include="Assets\Parts\Timer\IntevalSample.cs" />
+    <Compile Include="Assets\Parts\Timer\TimerSample.cs" />
+    <Compile Include="Assets\Parts\WWW\WWWSample.cs" />
     <Compile Include="Assets\Parts\Where\WhereSample.cs" />
     <Compile Include="Assets\UniRx\Examples\Sample01_ObservableWWW.cs" />
     <Compile Include="Assets\UniRx\Examples\Sample02_ObservableTriggers.cs" />

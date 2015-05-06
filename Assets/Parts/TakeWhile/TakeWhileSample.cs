@@ -3,7 +3,7 @@ using System.Collections;
 using UniRx;
 using UniRx.Triggers;
 
-public class TakeWhile : Base
+public class TakeWhileSample : Base
 {
     // Use this for initialization
     void Start()
@@ -14,6 +14,8 @@ public class TakeWhile : Base
         this.UpdateAsObservable()
             .TakeWhile(l => gameObject.transform.position.x <= 2)
             .Subscribe(l => Move(0.01f, 0));
+
+       
     }
 
 }
